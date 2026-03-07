@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Navbar */
+.navbar {
+    padding: 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-box .logo img {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+
+.navbar-box .menu {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.navbar-box .menu li {
+    list-style-type: none;
+}
+
+.navbar-box .menu li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.navbar-box .menu li a:hover {
+    color: #3674b5;
+}
+/* Navbar */
+
+/* greeting */
+.greeting {
+    margin-block: 50px;   
+}
+
+.greetingbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.greetingdesc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.greetingbox img {
+    border: 1px solid;
+    border-radius: 150px;
+    width: 200px;
+}
+
+.greetingbox h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.3;
+}
+
+.greetingbox h1 span {
+    font-weight: bold;
+    color: #3674b5;
+}
+
+.greetingbox p {
+    width: 50%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .greetingbox h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 475px) {
+    .greetingbox h1 {
+        font-size: 40px;
+    }
+}
+/* greeting */
+
+header svg {
+    margin-bottom: 20px;
+}
+
+/* Scroll Up */
+.scroll-up {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: #3674b5;
+    border: 1px solid #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.scroll-up:hover {
+    background-color: #3b7bc0;
+}
+
+.scroll-up a {
+    color: #ffffff;
+}
+
+@media (max-width: 475px) {
+    .scroll-up {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+/* Scroll Up */

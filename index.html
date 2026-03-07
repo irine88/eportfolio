@@ -3,22 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/rytech-no-bg.png" type="image/x-icon">
+    
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    />
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+
     <title>ePortfolio | Irine Dewi</title>
 </head>
 <body>
+    <!-- Scroll Up -->
+    <div class="scroll-up">
+        <a href="#">
+            <!-- <i class="fa-solid fa-arrow-up"></i> -->
+            <img src="image/top.ico">
+        </a>
+    </div>
+    <!-- Scroll Up -->
     <header>
         <!-- Navbar -->
         <div class="navbar">
             <div class="container">
                 <div class="navbar-box">
                     <div class="logo">
-
+                        <img src="image/logo.png">
                     </div>
                     <ul class="menu">
                         <li><a href="#about">About</a></li>
                         <li><a href="#project">Project Work</a></li>
                         <li><a href="#development">Professional Development</a></li>
-                        <li><a href="reflective">Reflective Learning</a></li>
+                        <li><a href="#reflective">Reflective Learning</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,16 +60,27 @@
                     <h1>
                         Hi! This is <span>Irine</span>
                     </h1>
-                    <img src="" alt="Irine Dewi">
-                    <p>
-                        I am currently pursuing a Master of Management in Auckland, New Zealand while working part-time and balancing family life.
-                    </p>
+                    <div class="greetingdesc">
+                        <img src="image/pp.jpg" alt="Irine Dewi">
+                        <p>
+                            I am Indonesian international student, currently pursuing a Master of Management in Auckland, New Zealand while working part-time and balancing family life.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div> 
         <!-- greeting --> 
+         <!-- Waves -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+                fill="#3674b5"
+                fill-opacity="1"
+                d="M0,64L48,85.3C96,107,192,149,288,154.7C384,160,480,128,576,138.7C672,149,768,203,864,229.3C960,256,1056,256,1152,245.3C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+        <!-- Waves -->
     </header>
-    <!-- project work -->
+    <!-- more about me -->
     <div class="about" id="about">
         <div class="container">
             <h1>More About Me</h1>
@@ -91,12 +131,154 @@ I am also open to the possibility of pursuing entrepreneurial opportunities in t
             </div>
         </div>
     </div>
+    <!-- more about me -->
+    <!-- project work -->
+    <div class="project" id="project">
+        <div class="container">
+            <h1>Project Work</h1>
+            <div class="projectbox">
+                <div class="box">
+                    <img src="" alt="Project 1">
+                    <div class="projectdesc">
+                        <h2>Inventory Lookup and Reporting Application</h2>
+                        <p>
+                            During my time as an Inventory Administrative Support staff member at PT. Euroasiatic Jaya, inventory records were managed through manual processes. The company used a simple desktop program that worked mainly as a digital stock card (kartu stok). 
+                        </p>
+                        <p>
+                            The existing inventory system had very limited functions and only allowed basic stock lookup and simple reports. To obtain more detailed information, sort data, or create customised reports, the data often had to be checked and made manually using spreadsheets. This process was time-consuming, made it difficult to obtain accurate inventory information, and increased the risk of errors.
+                        </p>
+                        <p>
+                            The goal of this project was to develop a simple desktop application to make it easier to retrieve inventory information and improve the inventory reporting process. I independently designed and developed the application using Visual Basic and SQL, based on the existing inventory data used by the organisation.
+                        </p>
+                        <p>
+                            The application was designed based on the existing system but developed using more modern tools and a database, allowing additional and improved features. It allows users to search inventory records by item name, supplier, customer, and other categories. Users can also view stock movement data and generate reports through a user-friendly interface. The system organised existing inventory data into a more structured format by combining the original database with manual records previously maintained in spreadsheets (stock cards). This made it possible to retrieve stock information and prepare inventory reports automatically using a single application.
+                        </p>
+                        <div class="projectbutton">
+                            preview
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
     <!-- project work -->
     <!-- professional development  -->
-
+    <div class="development" id="development">
+        <div class="container">
+            <h1>Professional Development</h1>
+            <div class="learninggoalbox">
+                <div class="box">
+                    <div>
+                        <h2>
+                            Personal Learning Goals
+                        </h2>
+                        <p>
+                            My personal Learning Goals...
+                        </p>
+                    </div>
+                    <div>
+                        <h2>
+                            Professional Learning Goals
+                        </h2>
+                        <p>
+                            My professional learning goals.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#">Download My CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- professional development  -->
     <!-- reflective learning -->
-    
+    <div class="reflective" id="reflective">
+        <div class="container">
+            <h1>Reflective Learning</h1>
+            <p>What I learned so far</p>
+            <div class="reflectivebox">
+                <div class="box">
+                    <img src="">
+                    <div class="reflectivedesc">
+                        <h2>Learning 1</h2>
+                        <p>
+                            Description of learnings
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="">
+                    <div class="reflectivedesc">
+                        <h2>Learning 2</h2>
+                        <p>
+                            Description of learnings
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="">
+                    <div class="reflectivedesc">
+                        <h2>Learning 3</h2>
+                        <p>
+                            Description of learnings
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="">
+                    <div class="reflectivedesc">
+                        <h2>Learning 4</h2>
+                        <p>
+                            Description of learnings
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="">
+                    <div class="reflectivedesc">
+                        <h2>Learning 5</h2>
+                        <p>
+                            Description of learnings
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <!-- reflective learning -->
+    <!-- peer evaluation post -->
+    <div class="peer" id="peer">
+        <div class="container">
+            <h1>Peer Evaluation Post</h1>
+            <p>What They Say</p>
+            <div class="peerbox">
+                <div class="box">
+                    <img src="">
+                    <div class="peerdesc">
+                        <h2>Evaluation 1</h2>
+                        <p>
+                            Evaluation about me
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="">
+                    <div class="peerdesc">
+                        <h2>Evaluation 2</h2>
+                        <p>
+                            Evaluation about me
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- peer evaluation post -->
+    <footer>
+        <p>Copyright 2026 by <span>Irine Dewi</span></p>
+    </footer>
 </body>
 </html>
