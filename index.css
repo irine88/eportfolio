@@ -53,11 +53,23 @@
 .navbar-box .menu li a:hover {
     color: #3674b5;
 }
+
+@media (max-width: 768px) {
+    .navbar-box .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 100%;
+    }
+}
+    
 /* Navbar */
 
 /* greeting */
 .greeting {
-    margin-block: 50px;   
+    /* margin-block: 50px;    */
+    margin-top: 50px;
+    margin-bottom: -70px;
 }
 
 .greetingbox {
@@ -72,6 +84,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-size: 20px;
 }
 
 .greetingbox img {
@@ -94,7 +107,8 @@
 
 .greetingbox p {
     width: 50%;
-    text-align: center;
+    text-align: left;
+    margin-left: 50px;
 }
 
 @media (max-width: 768px) {
