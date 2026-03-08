@@ -125,8 +125,36 @@
 /* greeting */
 
 header svg {
-    margin-bottom: 20px;
+    margin-bottom: -10px;
 }
+
+/* Tentang */
+.about {
+    padding-top: 100px;
+    background-color: #3674b5;
+    padding-bottom: 50px;
+    color: #ffffff;
+}
+
+.about .container > h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.about .container .aboutbox .box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact{
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Tentang */
 
 /* Scroll Up */
 .scroll-up {
