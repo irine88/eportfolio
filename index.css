@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
+    text-align: justify;
 }
 
 .container {
@@ -107,7 +108,7 @@
 
 .greetingbox p {
     width: 50%;
-    text-align: left;
+    text-align: justify;
     margin-left: 50px;
 }
 
@@ -149,9 +150,123 @@ header svg {
 
 .contact{
     display: flex;
-    /* align-items: flex-start; */
     justify-content: center;
-    gap: 60px;
+    border-radius: 10px;
+    background: white;
+    color: #3674b5;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contactleft, .contactright {
+    /* flex = 1; */
+    width: 50%;
+    padding: 20px;
+}
+
+.contactleft{
+    background-color: rgb(245, 245, 245);
+    flex: 6;
+}
+
+.contactleft img{
+    width: 60px;
+    height: 60px;
+}
+
+.contactright img{
+    width: 60px;
+    height: 60px;
+}
+
+.contactright{
+    background-color: white;
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contactlinkedin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.linkedin1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.contactemail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.formgroup label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contactright input,
+.contactright textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+}
+
+.contactright input:focus,
+.contactright textarea:focus {
+    border-color: #3674b5;
+    box-shadow: 0 0 0 2px rgba(54,116,181,0.15);
+}
+
+.contactright textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formbutton{
+    margin-top: 10px;
+    padding: 12px;
+    background: #3674b5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.textlinkedin{
+    color: black;
+}
+
+.linkedinbutton {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #3674b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+    text-align: center;
 }
 
 /* Tentang */
