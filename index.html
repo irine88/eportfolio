@@ -136,29 +136,37 @@ I am also open to the possibility of pursuing entrepreneurial opportunities in t
                         </div>
                     </div>
                     <div class="contactright">
+                        
                         <div class="contactemail">
                         <img src="image/email.png">
                         <h1>
                             Get in Touch
                         </h1>
+                        <!-- <form class="contactright" id="contactform" action="https://formspree.io/f/xpqyrbpy" method="POST"> -->
+                        <form id="contactForm" action="https://formspree.io/f/xpqyrbpy" method="POST">
+                            <div class="contactemail">
+                                <!-- <img src="image/email.png" alt="Email icon">
+                                <h1>Get in Touch</h1> -->
+                            </div>
                         </div>
                         <div class="formgroup">
                             <label>Name</label>
-                            <input type="text" placeholder="Your Name">
+                            <input type="text" name="name" placeholder="Your Name">
                         </div>  
                         <div class="formgroup">
                             <label>Email</label>
-                            <input type="text" placeholder="your@email.com">
+                            <input type="email" name="email" placeholder="your@email.com">
                         </div>
                         <div class="formgroup">
                             <label>Subject (optional)</label>
-                            <input type="text" placeholder="Subject">
+                            <input type="text" name="subject" placeholder="Subject">
                         </div>
                         <div class="formgroup">
                             <label>Message</label>
-                            <textarea placeholder="Write your message here"></textarea>
+                            <textarea name="message" placeholder="Write your message here"></textarea>
                         </div>
                         <button type="submit" class="formbutton">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -429,7 +437,7 @@ I am also open to the possibility of pursuing entrepreneurial opportunities in t
         <div class="peer-carousel">
             <button class="peer-arrow left">&#10094;</button>
 
-            <div class="peerbox">
+            <!-- <div class="peerbox">
                 <div class="box active">
                     <div class="peerdesc">
                         <h2>Evaluation 1</h2>
@@ -445,6 +453,21 @@ I am also open to the possibility of pursuing entrepreneurial opportunities in t
                         <p>
                             Evaluation about me
                         </p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="peerbox">
+                <div class="peerbox-wrapper">
+                    <div class="box">
+                        Irine has been a very kind, friendly, and supportive classmate throughout our studies. She is always respectful and approachable, which makes it comfortable for others to communicate and work with her. During class discussions and group activities, she listens carefully to different perspectives and responds thoughtfully.<br>
+                        I really appreciate Irine’s positive attitude towards learning. She shows genuine interest in the topics discussed in class and contributes helpful ideas during teamwork and presentations. Her calm and friendly personality helps create a supportive environment where everyone feels comfortable sharing their opinions.<br>
+                        Overall, Irine is a wonderful classmate to work with. Her kindness, cooperation, and dedication to her studies make group activities more enjoyable and productive. I believe she will continue to do well in her academic journey and future professional career.
+                    </div>
+                    <div class="box">
+                        Evaluation 2
+                    </div>
+                    <div class="box">
+                        Evaluation 3
                     </div>
                 </div>
             </div>
@@ -508,20 +531,21 @@ I am also open to the possibility of pursuing entrepreneurial opportunities in t
         });
     
     // peer
-const peerSlides = document.querySelectorAll('.peerbox .box');
+// Peer carousel
+const wrapper = document.querySelector('.peerbox-wrapper');
+const slides = document.querySelectorAll('.peerbox-wrapper .box');
 const prevPeer = document.querySelector('.peer-arrow.left');
 const nextPeer = document.querySelector('.peer-arrow.right');
 
 let currentPeer = 0;
 
 function showPeerSlide(index) {
-    peerSlides.forEach(slide => slide.classList.remove('active'));
-    peerSlides[index].classList.add('active');
+    wrapper.style.transform = "translateX(-" + (index * 100) + "%)";
 }
 
 nextPeer.addEventListener('click', () => {
     currentPeer++;
-    if (currentPeer >= peerSlides.length) {
+    if (currentPeer >= slides.length) {
         currentPeer = 0;
     }
     showPeerSlide(currentPeer);
@@ -530,10 +554,54 @@ nextPeer.addEventListener('click', () => {
 prevPeer.addEventListener('click', () => {
     currentPeer--;
     if (currentPeer < 0) {
-        currentPeer = peerSlides.length - 1;
+        currentPeer = slides.length - 1;
     }
     showPeerSlide(currentPeer);
 });
+
+// form
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const newTab = window.open("", "_blank");
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                contactForm.reset();
+
+                if (newTab) {
+                    newTab.document.write("<h2>Message sent successfully.</h2>");
+                }
+
+                alert("Message sent successfully!");
+            } else {
+                if (newTab) {
+                    newTab.close();
+                }
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            if (newTab) {
+                newTab.close();
+            }
+            alert("Something went wrong. Please try again.");
+        }
+    });
+}
     </script> 
 </body>
 </html>
