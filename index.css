@@ -550,6 +550,11 @@ svg {
     display: block;
 }
 
+.peerbox .peerbox-wrapper .box{
+    text-align: center;
+    align-content: center;
+}
+
 .peerdesc h2 {
     margin-bottom: 15px;
 }
