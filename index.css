@@ -585,6 +585,21 @@ svg {
 .peer-arrow:hover {
     background: #f2f2f2;
 }
+
+.container .evaluationbox .box{
+    /* padding: 50px; */
+}
+
+.evaluationbox {
+    background-color: #3674b5;
+    color: #ffffff;
+}
+
+.evaluationbox > h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
 /* peer */
 
 /* Kontak */
