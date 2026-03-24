@@ -582,12 +582,12 @@ svg {
     padding: 0;
 }
 
-.peer-arrow:hover {
-    background: #f2f2f2;
+.peer .container{
+    padding-bottom: 150px;
 }
 
-.container .evaluationbox .box{
-    /* padding: 50px; */
+.peer-arrow:hover {
+    background: #f2f2f2;
 }
 
 .evaluationbox {
